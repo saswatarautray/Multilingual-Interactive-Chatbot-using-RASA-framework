@@ -1,0 +1,57 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - affirm
+  - deny
+  - lang_search
+  - country_search
+  - macroarea_search
+
+entities:
+  - language
+
+responses:
+  utter_greet:
+  - text: |
+     नमस्ते दोस्त! मैं जार्विस हूँ | मैं तुम्हारी मदद कैसे कर सकता हूं?
+  - text: |
+     नमस्ते दोस्त! मैं जार्विस हूँ | आपकी सेवा में 24x7! मेरे द्वारा आपके लिए क्या किया जा सकता है?
+  utter_goodbye:
+  - text: |
+     अलविदा दोस्त! आप से बात करके अछा लगा।
+  - text: |
+     फिर मिलेंगे दोस्त! आप से बात करके अछा लगा।
+  utter_thanks:
+  - text: |
+     मुझे यह सुन कर खुशी हुई दोस्त!
+  - text: |
+     धन्यवाद दोस्त! आपकी मदद करके खुश हूं |
+  - text: |
+     मदद करने में खुशी हुई दोस्त:)
+  utter_affirm:
+  - text: |
+     धन्यवाद! आपकी मदद करके खुशी हुई दोस्त|
+  utter_deny:
+  - text: |
+     मुझे दुख है कि मैं आपकी मदद नहीं कर सका | कृपया पुन: प्रयास करें दोस्त|
+  utter_feedback:
+  - text: |
+     क्या इससे आपको मदद मिली दोस्त?
+  - text: |
+     क्या जानकारी उपयोगी थी दोस्त?
+actions:
+- '...'
+- utter_greet
+- utter_goodbye
+- action_lang_search
+- utter_thanks
+- utter_affirm
+- utter_deny
+- utter_feedback
+- action_country_search
+- action_macroarea_search

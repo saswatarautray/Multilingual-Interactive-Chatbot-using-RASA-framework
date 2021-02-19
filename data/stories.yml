@@ -1,0 +1,31 @@
+# stories:
+#  - story: greet and subscribe
+#    steps:
+#    - intent: greet
+#    - action: utter_greet
+#    - intent: subscribe
+#    - action: newsletter_form
+#    - active_loop: newsletter_form
+
+
+# stories:
+#  - story: search a language details based on user query
+#    steps:
+#    - intent: lang_search
+#    - action: action_lang_search
+#    - checkpoint: check_feedback
+#    # - action: utter_feedback
+   
+#  - story: user provides positive feedback
+#    steps:
+#    - checkpoint: check_feedback
+#    - action: utter_feedback
+#    - intent: affirm
+#    - action: utter_affirm
+
+#  - story: user provides negative feedback
+#    steps:
+#    - checkpoint: check_feedback
+#    - action: utter_feedback
+#    - intent: deny
+#    - action: utter_deny

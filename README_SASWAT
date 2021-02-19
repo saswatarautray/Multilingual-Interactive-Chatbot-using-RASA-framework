@@ -1,0 +1,28 @@
+https://medium.com/@expanded_blue_elk_810/rasa-loading-fasttext-vectors-with-spacy-1aad2a2431b
+
+python -m spacy init-model hi ./spacy_hi --vectors-loc ./cc.hi.300.vec.gz --verbose
+python -m spacy package ./spacy_hi ./packed
+cd packed/hi_model-0.0.0
+python setup.py sdist
+pip install dist/hi_model-0.0.0.tar.gz
+python -m spacy link hi_model hi
+
+
+
+language: "hi"  # your two-letter language code
+pipeline:
+  - name: SpacyNLP
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 100
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
