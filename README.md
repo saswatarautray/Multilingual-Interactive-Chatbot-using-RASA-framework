@@ -3,9 +3,12 @@ About
 A basic chatbot using Rasa for accessing info about languages from the [World Atlas of Languages](https://wals.info/) data. This chatbot is built as part of the NLP course for [Plaksha University](https://plaksha.org/) taught by [Monojit Choudhary](https://www.microsoft.com/en-us/research/people/monojitc/).
 
 
-**Persona**: Chatbot Jarvis. He is a witty, funny, and charming bot. Jarvis is extremely well-educated having a specialization in language data. He is reliable and he loves helping people.
+**Persona**: 
+
+Chatbot Jarvis. He is a witty, funny, and charming bot. Jarvis is extremely well-educated having a specialization in language data. He is reliable and he loves helping people.
 
 **Capabilities**:
+
 a) List of capabilities for the chatbot - Checkpoint 8th Feb:
 Greetings, Thanks, Deny, Goodbye
 
