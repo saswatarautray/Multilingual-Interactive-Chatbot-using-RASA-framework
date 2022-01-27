@@ -20,12 +20,21 @@ WALS code, - id in language.csv
 genus, Family of language, ISO code
 Feedback with follow up conversation
 
-Installation
-------------------
 
- - [Windows Installation Instructions](Install_windows.md)
- - [Linux Installation Instructions](Install_linux.md)
- - [MacOS Installation Instructions](Install_macos.md)
+#### What is Rasa?
+Rasa is an open source Conversational AI framework. What I like about Rasa is you are not tied to a pre-built model or usecase (Dialogflow etc.). So you can customize it to your usecase which can be a market differentiator. Rasa is not a rule based framework (e.g. Botkit) and you don’t need to worry about putting your data in someone else’s cloud as in Dialogflow, Microsoft LUIS or Amazon Lex.
+
+Rasa has two main components — Rasa NLU and Rasa Core.
+
+NLU is Natural Language Understanding. Suppose the user says “I want to order a book”. NLU’s job is to take this input, understand the intent of the user and find the entities in the input. For example, in the above sentence, the intent is ordering and the entity is book. Rasa NLU internally uses Bag-of-Word (BoW) algorithm to find intent and Conditional Random Field (CRF) to find entities. 
+
+The job of Rasa Core is to essentially generate the reply message for the chatbot. It takes the output of Rasa NLU (intent and entities) and applies Machine Learning models to generate a reply.
+
+
+![image](https://user-images.githubusercontent.com/47337257/151379256-e4d342c4-4b1f-4a88-91a7-d5c1e153ddb5.png)
+> Basic steps of Rasa app internally works to reply a message.
+
+As seen in the above diagram, the input message is interpreted by an Interpreter to extract intent and entity. It is then passed to the Tracker that keeps track of the current state of the conversation. The Policy applies Machine Learning algorithm to determine what should be the reply and choses Action accordingly. Action updates the Tracker to reflect the current state.
 
 How to run Locally
 ------------------ 
