@@ -1,7 +1,6 @@
-About
-------------------
-A basic chatbot using Rasa for accessing info about languages from the [World Atlas of Languages](https://wals.info/) data. This chatbot is built as part of the NLP course for [Plaksha University](https://plaksha.org/) taught by [Monojit Choudhary](https://www.microsoft.com/en-us/research/people/monojitc/).
+A chatbot using Rasa for accessing info about languages from the [World Atlas of Languages](https://wals.info/) data. 
 
+Dataset: https://zenodo.org/record/3731125#.YexcVv7MK3A
 
 **Persona**: 
 
@@ -85,6 +84,8 @@ your_url_here/webhooks/slack/webhook
 
 And you should now be able to talk to your chatbot in Slack! 
 
-License
-------------------
-GPL-V3# Chatbot_Rasa_Hindi
+
+
+And you should now be able to talk to your chatbot in Slack! 
+
+![1_0PsFouNNE_vSX29xBc2lHQ](https://user-images.githubusercontent.com/47337257/150653289-7cd4658a-ce99-47ac-896b-af4d92c680df.gif)
